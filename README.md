@@ -31,4 +31,3 @@ The project focuses on basic data handling, computation, and visualization techn
 - Upload the project to **GitHub** as part of my R learning portfolio  
 
 
-### 📂 Project Structure
