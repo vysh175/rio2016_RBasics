@@ -93,26 +93,6 @@ cat("Total medals across all countries: \nGold:", total_gold, "\nSilver:", total
 #_____________________________________________________________________________________________
 
 #BARPLOT FOR TOP 10 COUNTRIES 
-par(mar = c(8, 5, 5, 2))  # Increase bottom margin to 8 lines
-top10 <- rio_sorted[1:10, ]
-  
-bp <- barplot(top10$Total, names.arg = FALSE, col = "lightsteelblue", 
-        border = "white", main = " Top 10 Countries by Total Medals  - Rio 2016", 
-        xlab = "Country", ylab = "Medals", las = 2, font.main = 2, font.lab = 2)
-
-#ADD MEDAL COUNT LABELS
-text(x = bp,
-     y = par("usr")[3]-3,   #PLACES TEXT BELOW X AXIS
-     labels = top10$Country, 
-     xpd = TRUE,            #ALLOWS TEXT OUTSIDE PLOT AREA 
-     cex = 0.8,             #TEXT SIZE
-     srt = 45,              #ROTATE 45 DEGREES 
-     adj = 1,               #RIGHT ALIGN TEXT
-     col = "black")         #TEXT COLOUR
-
-#ADD A LIGHT GRID FOR CLARITY
-abline(h = seq(0, max(top10$Total), by = 20), col = "gray90", lty = 2)
-
 # Save the bar plot as an image in the "plots" folder
 png("plots/top10_barplot.png", width = 800, height = 600)
 par(mar = c(8, 5, 5, 2))  # Increase bottom margin to 8 lines
